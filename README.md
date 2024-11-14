@@ -1,4 +1,5 @@
 Coded by Daniel Lesniak
+
 This is the time tracker for the cosmetology class.
 
 Run the scanner.py program to open the base UI for the check-in and check-out system. Students may manually input their student number or scan their ID to have it automatically pasted into the box.
