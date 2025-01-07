@@ -3,7 +3,6 @@ from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
-# Replace with your GitHub repository's raw file URL
 GITHUB_RAW_URL = 'https://raw.githubusercontent.com/poptarts-tasty-af/Student-Cosmo-Logs/main/Student_Logs/master_log.json'
 
 @app.route('/')
@@ -13,9 +12,8 @@ def home():
 @app.route('/api/data', methods=['GET'])
 def get_api_data():
     try:
-        # Pull the JSON data from GitHub
         response = requests.get(GITHUB_RAW_URL)
-        response.raise_for_status()  # Raise an error for bad status
+        response.raise_for_status()
         data = response.json()
         return jsonify(data)
     except Exception as e:
